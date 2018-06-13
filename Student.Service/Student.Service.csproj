@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="FluentValidation" Version="7.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GR.Model\GR.Model.csproj" />
+    <ProjectReference Include="..\GR.Repository\GR.Repository.csproj" />
+    <ProjectReference Include="..\GR.Service\GR.Service.csproj" />
+    <ProjectReference Include="..\Student.DTO\Student.Data.csproj" />
+    <ProjectReference Include="..\Student.Repository\Student.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

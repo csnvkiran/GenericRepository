@@ -6,7 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GR.Model\GR.Model.csproj" />
+    <ProjectReference Include="..\GR.Repository\GR.Repository.csproj" />
   </ItemGroup>
 
 </Project>
