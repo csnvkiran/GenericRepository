@@ -6,5 +6,7 @@ using Student.Repository;
 
 namespace Student.Repository.Interface
 {
+    public interface IEntityReadStudentGeneralRepositoryAsync : IEntityReadRepositoryAsync<StudentGeneral> { }
+
     public interface IEntityStudentGeneralRepositoryAsync : IEntityRepositoryAsync<StudentGeneral> { }
 }

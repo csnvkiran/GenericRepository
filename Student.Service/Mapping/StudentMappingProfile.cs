@@ -12,6 +12,9 @@ namespace Student.Service.Mapping
         public ClientMappingProfile()
         {
             CreateMap<StudentGeneralModel, StudentGeneral>();
+            CreateMap<StudentAddressModel, StudentAddress>();
+            CreateMap<StudentContactModel, StudentContact>();
+            CreateMap<StudentIdentityModel, StudentIdentity>();
             //.ReverseMap()
         }
     }

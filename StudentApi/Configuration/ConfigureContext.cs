@@ -27,28 +27,28 @@ namespace StudentApi.Configuration
             var conn = new ConnectionSettings();
             sectionData.Bind(conn);
 
-            //Use a MS SQL Server database
-            var sqlConnectionString = conn.StudentSqlDB; //Configuration.GetConnectionString("StudentSqlDB")
-
-            // services.AddDbContextPool<StudentDBContext>(options =>
-            services.AddDbContext<StudentDBContext>(options =>
-               options.UseSqlServer(
-                   sqlConnectionString,
-                   b => b.MigrationsAssembly("StudentApi")
-               )
-           );
-
-
-            // //Use a My SQL Server database
-            // var sqlConnectionString = conn.StudentMySqlDB; //Configuration.GetConnectionString("StudentSqlDB")
+            // //Use a MS SQL Server database
+            // var sqlConnectionString = conn.StudentSqlDB; //Configuration.GetConnectionString("StudentSqlDB")
 
             // // services.AddDbContextPool<StudentDBContext>(options =>
             // services.AddDbContext<StudentDBContext>(options =>
-            //    options.UseMySQL(
+            //    options.UseSqlServer(
             //        sqlConnectionString,
             //        b => b.MigrationsAssembly("StudentApi")
             //    )
             //);
+
+
+            //Use a My SQL Server database
+            var sqlConnectionString = conn.StudentMySqlDB; //Configuration.GetConnectionString("StudentSqlDB")
+
+            // services.AddDbContextPool<StudentDBContext>(options =>
+            services.AddDbContext<StudentDBContext>(options =>
+               options.UseMySQL(
+                   sqlConnectionString,
+                   b => b.MigrationsAssembly("StudentApi")
+               )
+           );
 
 
             services.AddScoped<IUnitOfWork, UnitOfWork<StudentDBContext>>();

@@ -12,6 +12,9 @@ namespace Student.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentGeneral>();
+            modelBuilder.Entity<StudentIdentity>();
+            modelBuilder.Entity<StudentAddress>();
+            modelBuilder.Entity<StudentContact>();
         }
     }
 

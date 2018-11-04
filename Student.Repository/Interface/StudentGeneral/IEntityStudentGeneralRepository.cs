@@ -7,5 +7,6 @@ using Student.Repository;
 namespace Student.Repository.Interface
 {
     public interface IEntityReadStudentGeneralRepository : IEntityReadRepository<StudentGeneral> { }
-    
+
+    public interface IEntityStudentGeneralRepository : IEntityRepository<StudentGeneral> { }
 }
